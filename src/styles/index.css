@@ -3,6 +3,10 @@ body {
     /* font-family: 'Roboto', sans-serif; */
 }
 
+.sketch-picker {
+    position: absolute;
+}
+
 .mt-5 {
     margin-top: 5rem;
 }
