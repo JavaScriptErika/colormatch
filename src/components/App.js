@@ -1,14 +1,19 @@
 import React from 'react'
 import Header from './Header'
-import FirstColumnColorSelector from './FirstColumnColorSelector'
+import BackgroundColorSelector from './BackgroundColorSelector'
 
 const App = () => {
     return(
         <div>
             <Header />
-            <FirstColumnColorSelector />
 
+            <div className="container mt-5">
+                <div className="columns">
+                    <BackgroundColorSelector />
+                </div>
             </div>
+
+        </div>
     )
 }
 
