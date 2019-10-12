@@ -21,7 +21,7 @@ class BackgroundColorSelector extends React.Component {
             rgba: color.rgb
         })
 
-        console.log(color.rgb)
+        this.props.assignColorChange(this.props.name, this.state.rgba, this.state.background)
     }
 
     handleClick = () => {
@@ -30,8 +30,6 @@ class BackgroundColorSelector extends React.Component {
             displayColorPicker: !prevState.displayColorPicker 
             }
         })
-
-        console.log(this.state.displayColorPicker)
     }
 
     render(){
@@ -43,23 +41,23 @@ class BackgroundColorSelector extends React.Component {
         }
 
         return(
-                <div className="column is-one-quarter">
-                    <p>click the box to get started</p>
-                    <h5>Background Color</h5>
+                <div>
+                    <h5>{this.props.title}</h5>
                     <div className="box" 
                             style={{backgroundColor: `rgba(${this.state.rgba.r}, ${this.state.rgba.g}, ${this.state.rgba.b}, ${this.state.rgba.a})`}}
                             onClick={this.handleClick}
                     >
                     </div>
                     {showPicker}
-                    <input 
+
+                    {/* <input 
                         value={this.state.background}
                     />
                     <br/>
                     <input 
                         value={`rgba(${this.state.rgba.r}, ${this.state.rgba.g}, ${this.state.rgba.b}, ${this.state.rgba.a})`}
                         readOnly
-                    />
+                    /> */}
                     
                 </div>
 
