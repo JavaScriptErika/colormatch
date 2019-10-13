@@ -10,3 +10,7 @@ body {
 .mt-5 {
     margin-top: 5rem;
 }
+
+.my-3 {
+    margin: 1rem 0;
+}

@@ -41,7 +41,7 @@ class BackgroundColorSelector extends React.Component {
         }
 
         return(
-                <div>
+                <div className="my-3">
                     <h5>{this.props.title}</h5>
                     <div className="box" 
                             style={{backgroundColor: `rgba(${this.state.rgba.r}, ${this.state.rgba.g}, ${this.state.rgba.b}, ${this.state.rgba.a})`}}
