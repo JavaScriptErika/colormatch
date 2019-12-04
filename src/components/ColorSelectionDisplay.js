@@ -19,7 +19,13 @@ class ColorSelectionDisplay extends React.Component {
             paragraphHEXColorDisplay: paragraph[1],
 
             buttonTextRGBAColorDisplay: `rgba(${buttonText[0].r}, ${buttonText[0].g}, ${buttonText[0].b}, ${buttonText[0].a})`,
-            buttonTextHEXColorDisplay: buttonText[1]
+            buttonTextHEXColorDisplay: buttonText[1],
+
+            buttonBackgroundRGBAColorDisplay: `rgba(${buttonBackground[0].r}, ${buttonBackground[0].g}, ${buttonBackground[0].b}, ${buttonBackground[0].a})`,
+            buttonBackgroundHEXColorDisplay: buttonBackground[1],
+
+            linkRGBAColorDisplay: `rgba(${linkColor[0].r}, ${linkColor[0].g}, ${linkColor[0].b}, ${linkColor[0].a})`,
+            linkHexColorDisplay: linkColor[1]
          }
 
          console.log(this.props.background)
@@ -39,7 +45,7 @@ class ColorSelectionDisplay extends React.Component {
                                 className="button" 
                                 style={{
                                     color: colors.buttonTextHEXColorDisplay,
-                                    backgroundColor: `rgba(${buttonBackground.r}, ${buttonBackground.g}, ${buttonBackground.b}, ${buttonBackground.a})`,
+                                    backgroundColor: colors.buttonBackgroundHEXColorDisplay,
                                     }}
                                 >
                                 Button
@@ -50,7 +56,7 @@ class ColorSelectionDisplay extends React.Component {
                             <a 
                                 href
                                 onClick={e => e.preventDefault()}
-                                style={{color: `rgba(${linkColor.r}, ${linkColor.g}, ${linkColor.b}, ${linkColor.a})`}}
+                                style={{color: colors.linkRGBAColorDisplay}}
                                 >
                                 This is a link
                             </a>
@@ -77,6 +83,13 @@ class ColorSelectionDisplay extends React.Component {
 
                             <p>.btnText: {colors.buttonTextRGBAColorDisplay}</p>
                             <p>.btnText-hex: {colors.buttonTextHEXColorDisplay}</p>
+
+                            
+                            <p>.btnBackground: {colors.buttonBackgroundRGBAColorDisplay}</p>
+                            <p>.btnBackground-hex: {colors.buttonBackgroundHEXColorDisplay}</p>
+
+                            <p>.link: {colors.linkRGBAColorDisplay}</p>
+                            <p>.link-hex: {colors.linkHexColorDisplay}</p>
                         </div>
                     </div>
 

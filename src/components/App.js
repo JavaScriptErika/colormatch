@@ -84,9 +84,9 @@ class App extends React.Component {
                         heading={this.state.heading}
                         subheading={this.state.subheading}
                         paragraph={this.state.paragraph}
-                        buttonBackground={this.state.buttonBackground[0]}
+                        buttonBackground={this.state.buttonBackground}
                         buttonText={this.state.buttonText}
-                        linkColor={this.state.linkColor[0]} 
+                        linkColor={this.state.linkColor} 
                     />
                             
                 
